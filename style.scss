@@ -1,0 +1,22 @@
+#calendar {
+    width: 300px;
+    h4, li {
+        padding-bottom: 10px;
+        width: 14%;
+        font-family: sans-serif;
+        text-align: center;
+    }
+    h4 {
+        display: inline-block;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        li {
+            display: inline-block;
+            
+        }
+    }
+}

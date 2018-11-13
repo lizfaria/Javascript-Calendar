@@ -1,0 +1,26 @@
+#calendar {
+  width: 300px;
+}
+
+#calendar h4, #calendar li {
+  padding-bottom: 10px;
+  width: 14%;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#calendar h4 {
+  display: inline-block;
+}
+
+#calendar ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+#calendar ul li {
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */
