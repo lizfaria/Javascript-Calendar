@@ -17,6 +17,13 @@ app.nextMonth = function() {
 
 }
 
+app.displayMonthAndYear = function (theMonth, theYear) {
+    const elem = document.createElement('h1');
+    const text = document.createTextNode(`${theMonth} ${theYear}`);
+    elem.appendChild(text);
+    document.getElementById('calendar').appendChild(elem);
+}
+
 app.getFirstDay = function (theYear, theMonth) {
     const firstDate = new Date(theYear, theMonth, 1);
     return firstDate.getDay()
@@ -52,7 +59,6 @@ app.createDateCells = function(container) {
         const elem = document.createElement('li');
         elem.classList.add('day');
         elem.setAttribute("id", cell);
-        console.log(elem);
         container.appendChild(elem);
     });
     app.appendDateToDateCells(container);
@@ -75,6 +81,7 @@ app.appendDateToDateCells = function(container) {
 }
 	
 app.events = function () {
+    app.displayMonthAndYear(theMonth, theYear);
    app.createContainer();
 //    document.getElementById("prev").onclick(app.previousMonth);
 //    document.getElementById("next").onclick(app.nextMonth)
@@ -88,5 +95,6 @@ app.init = function () {
     app.init();
 });
 
+// convert month index numbers to full words
 // show month on dom 
 // previous and next buttons change calendar to corresponding months
